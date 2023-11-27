@@ -1,0 +1,10 @@
+<div class="form-group" > 
+  <label for="select">Select option</label>
+  <select name="" id="select" [(ngModel)]="selectedHeroId" (change)="onSelect(selectedHeroId)" >
+    <option [value]="hero.id" *ngFor="let hero of heroes" >{{hero.name}}</option>
+    <option value="0 ">Create new Hero</option>
+  </select>
+<app-hero-crud [selectedHero]!="selectedHero"></app-hero-crud>
+
+
+</div>
